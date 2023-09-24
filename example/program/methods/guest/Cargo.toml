@@ -8,4 +8,9 @@ edition = "2021"
 
 [dependencies]
 # If you want to try (experimental) std support, add `features = [ "std" ]` to risc0-zkvm
-risc0-zkvm = { version = "0.18.0", default-features = false }
+risc0-zkvm = { version = "0.18.0", default-features = false, features = [ "std" ] }
+
+# Use a local ring crate built with PR 1574 containing support for RISCV64 architecture
+# Ref: https://github.com/briansmith/ring/pull/1574
+#ring = "0.16.20"
+ring = {path = "/home/p/Work/Upwork/Andrew_Cassetti/Code/ring"}
